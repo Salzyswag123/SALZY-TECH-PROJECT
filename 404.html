@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      // If a route like /projects is opened, redirect back to index.html
+      // and preserve the path/query/hash
+      var path = window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace("/index.html" + path);
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>

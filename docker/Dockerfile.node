@@ -1,0 +1,18 @@
+### Dev Dockerfile: runs the project's existing `npm start` (lite-server).
+### Use for development/testing in a container. Not recommended for production.
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files and install deps (leverages caching)
+COPY package.json package-lock.json* ./
+RUN npm install --no-audit --no-fund --silent
+
+# Copy project
+COPY . .
+
+ENV PORT=3000
+EXPOSE 3000
+
+CMD ["npm", "start"]

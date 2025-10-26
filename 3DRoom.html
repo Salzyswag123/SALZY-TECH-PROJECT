@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Penha</title>
+  
+
+  <!-- Model Viewer Script -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    /* Back arrow styling */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body data-barba="wrapper">
+
+  <!-- Back button -->
+  <a href="http://localhost:3000" class="back-btn" title="Back to Home">←</a>
+
+  <!-- 3D Model Section -->
+  <section id="home-3d" style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #000;">
+    <iframe
+      title="Apartment Living Room Interior"
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      xr-spatial-tracking
+      execution-while-out-of-viewport
+      execution-while-not-rendered
+      web-share
+      style="width: 100%; height: 100%; border: none;"
+      src="https://sketchfab.com/models/cef1317334a5422a8f954bf4b35ecb4a/embed?autostart=1&camera=0&ui_hint=0&ui_theme=dark"
+    ></iframe>
+  </section>
+
+</body>
+</html>
