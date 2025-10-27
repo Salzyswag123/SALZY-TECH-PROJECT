@@ -22,5 +22,5 @@ COPY wp-content /usr/share/nginx/html/wp-content
 COPY wp-includes /usr/share/nginx/html/wp-includes
 
 EXPOSE 80
-
+#yh
 CMD ["nginx", "-g", "daemon off;"]
